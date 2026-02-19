@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://billrui.github.io/IMARA",
+  "homepage": "https://github.com/billrui/IMARA_UPDATE",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

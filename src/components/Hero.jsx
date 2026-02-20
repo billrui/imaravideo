@@ -12,19 +12,18 @@ import Logo from "../assets/IMARA.jpg";
 // Import your video
 import LabVideo from "../assets/HOME.mp4"; // Make sure this path is correct
 
-// Button styles - MOBILE OPTIMIZED
+// Button styles - PROFESSIONAL WITH ROUNDED EDGES AND EMOJIS
 const BUTTON_STYLES = {
-  primary: "bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full transition-all duration-300 font-medium px-4 py-2 text-xs shadow-lg hover:shadow-xl active:scale-95",
-  secondary: "bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full transition-all duration-300 font-medium px-4 py-2 text-xs shadow-lg hover:shadow-xl active:scale-95",
-  accent: "bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full transition-all duration-300 font-medium px-4 py-2 text-xs shadow-lg hover:shadow-xl active:scale-95",
-  mobile: "bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full transition-all duration-300 font-medium px-6 py-3 text-sm shadow-lg hover:shadow-xl active:scale-95 w-full max-w-xs mx-auto",
+  primary: "bg-gradient-to-r from-green-600 to-green-700 text-white rounded-full transition-all duration-300 font-medium px-3 py-1.5 text-xs shadow-md hover:shadow-lg hover:from-green-700 hover:to-green-800 active:scale-95 border border-green-400/20 flex items-center justify-center gap-1.5",
+  secondary: "bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full transition-all duration-300 font-medium px-3 py-1.5 text-xs shadow-md hover:shadow-lg hover:from-blue-700 hover:to-blue-800 active:scale-95 border border-blue-400/20 flex items-center justify-center gap-1.5",
+  accent: "bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full transition-all duration-300 font-medium px-3 py-1.5 text-xs shadow-md hover:shadow-lg hover:from-purple-700 hover:to-purple-800 active:scale-95 border border-purple-400/20 flex items-center justify-center gap-1.5",
 };
 
-// Desktop button styles (will override on larger screens)
+// Desktop button styles (slightly larger)
 const DESKTOP_BUTTON_STYLES = {
-  primary: "sm:bg-gradient-to-r sm:from-green-500 sm:to-green-600 sm:text-white sm:rounded-full sm:transition-all sm:duration-300 sm:font-medium sm:px-6 sm:py-3 sm:text-base",
-  secondary: "sm:bg-gradient-to-r sm:from-blue-500 sm:to-blue-600 sm:text-white sm:rounded-full sm:transition-all sm:duration-300 sm:font-medium sm:px-6 sm:py-3 sm:text-base",
-  accent: "sm:bg-gradient-to-r sm:from-purple-500 sm:to-purple-600 sm:text-white sm:rounded-full sm:transition-all sm:duration-300 sm:font-medium sm:px-6 sm:py-3 sm:text-base",
+  primary: "sm:px-5 sm:py-2.5 sm:text-sm sm:gap-2",
+  secondary: "sm:px-5 sm:py-2.5 sm:text-sm sm:gap-2",
+  accent: "sm:px-5 sm:py-2.5 sm:text-sm sm:gap-2",
 };
 
 // Slide data
@@ -45,7 +44,7 @@ const slides = [
       { name: "Basic soil analysis", parameters: "pH, P, K, Ca, Mg, Na, OM, N, CEC" },
     ],
     icon: "🌱",
-    metrics: { turnaround: "1-3 days" }
+    metrics: { turnaround: "1-7 days" }
   },
   {
     title: "Plant Tissue Analysis",
@@ -55,7 +54,7 @@ const slides = [
       { name: "Leaf analysis", parameters: "N, P, K, Ca, Mg, S, Na, Fe, Mn, B, MO, Zn" },
     ],
     icon: "🌿",
-    metrics: { turnaround: "1-3 days" }
+    metrics: { turnaround: "1-7 days" }
   },
   {
     title: "Animal Feed Analysis",
@@ -65,25 +64,25 @@ const slides = [
       { name: "Heavy metals analysis", parameters: "Cu, Cd, Pb, Co, B, Ni, Zn, Cr, As" },
     ],
     icon: "🐄",
-    metrics: { turnaround: "1-3 days" }
+    metrics: { turnaround: "1-7 days" }
   },
   {
     title: "Food Analysis",
     description: "Quality and safety testing for human food products.",
     icon: "🍎",
-    metrics: { turnaround: "1-3 days" }
+    metrics: { turnaround: "1-7 days" }
   },
   {
     title: "Fertilizer Analysis",
     description: "Determine quality and chemical composition of fertilizers for optimal crop yield.",
     icon: "🧪",
-    metrics: { turnaround: "1-3 days" }
+    metrics: { turnaround: "1-7 days" }
   },
   {
     title: "Compost / Manure Analysis",
     description: "Organic matter evaluation supporting sustainable soil management.",
     icon: "🌿",
-    metrics: { turnaround: "1-3 days" }
+    metrics: { turnaround: "1-7 days" }
   },
   {
     title: "Water Analysis",
@@ -93,13 +92,13 @@ const slides = [
       { name: "Complete irrigation water", parameters: "pH, Na, Al, Ca, Mg, Cl, EC, TDS, S, Ni, P, K, B, SO4, Total nitrogen, NH4" },
     ],
     icon: "💧",
-    metrics: { turnaround: "1-3 days" }
+    metrics: { turnaround: "1-7 days" }
   },
   {
     title: "NEMA Effluent Analysis",
     description: "Environmental discharge testing meeting regulatory compliance standards.",
     icon: "🏭",
-    metrics: { turnaround: "1-3 days" }
+    metrics: { turnaround: "1-7 days" }
   },
   {
     title: "Research Analysis",
@@ -116,7 +115,6 @@ const HeroWithNavbar = forwardRef((props, ref) => {
   const [swiper, setSwiper] = useState(null);
   const [showServicePopup, setShowServicePopup] = useState(false);
   const [showInfoPopup, setShowInfoPopup] = useState(false);
-  const [showMobileMenuPopup, setShowMobileMenuPopup] = useState(false);
   const [currentInfo, setCurrentInfo] = useState({ title: "", description: "", table: null, icon: "", metrics: {} });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -173,7 +171,6 @@ const HeroWithNavbar = forwardRef((props, ref) => {
   const handleServiceClick = (service) => {
     handleWhatsApp(`Hello, I would like to request: ${service.title}`);
     setShowServicePopup(false);
-    setShowMobileMenuPopup(false);
   };
 
   const handleRequestPrice = () => handleWhatsApp("Hello, I would like the Price List.");
@@ -462,78 +459,6 @@ const HeroWithNavbar = forwardRef((props, ref) => {
         )}
       </AnimatePresence>
 
-      {/* Mobile Action Menu Popup */}
-      <AnimatePresence>
-        {showMobileMenuPopup && (
-          <motion.div
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={(e) => e.target === e.currentTarget && setShowMobileMenuPopup(false)}
-          >
-            <motion.div
-              className="bg-gray-900/95 backdrop-blur-xl w-full max-w-sm rounded-2xl shadow-2xl border border-white/10 p-6"
-              initial={{ scale: 0.9, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.9, y: 20 }}
-            >
-              <h3 className="text-xl font-bold text-white mb-4 text-center">Choose an option</h3>
-              
-              <div className="space-y-3">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => {
-                    setShowServicePopup(true);
-                    setShowMobileMenuPopup(false);
-                  }}
-                  className="w-full py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl font-medium shadow-lg flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <span>🔬</span>
-                  <span>Request Service</span>
-                </motion.button>
-                
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => {
-                    handleRequestPrice();
-                    setShowMobileMenuPopup(false);
-                  }}
-                  className="w-full py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-medium shadow-lg flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <span>💰</span>
-                  <span>Price List</span>
-                </motion.button>
-                
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => {
-                    handleRequestCallback();
-                    setShowMobileMenuPopup(false);
-                  }}
-                  className="w-full py-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl font-medium shadow-lg flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <span>📞</span>
-                  <span>Call Back</span>
-                </motion.button>
-              </div>
-              
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => setShowMobileMenuPopup(false)}
-                className="mt-4 w-full py-3 bg-white/10 hover:bg-white/15 text-white rounded-xl font-medium transition-colors border border-white/10 cursor-pointer"
-              >
-                Cancel
-              </motion.button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* Hero Swiper */}
       <Swiper
         onSwiper={setSwiper}
@@ -606,7 +531,7 @@ const HeroWithNavbar = forwardRef((props, ref) => {
                           {/* Decorative elements */}
                           <div className="flex items-center justify-center gap-3 mt-2">
                             <div className="w-12 h-px bg-gradient-to-r from-transparent via-yellow-300 to-transparent"></div>
-                            <span className="text-yellow-300/50 text-sm">⚛️</span>
+                            <span className="text-yellow-300/50 text-sm">🔬</span>
                             <div className="w-12 h-px bg-gradient-to-r from-transparent via-green-300 to-transparent"></div>
                           </div>
                         </motion.div>
@@ -616,55 +541,46 @@ const HeroWithNavbar = forwardRef((props, ref) => {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.6, delay: 0.3 }}
-                          className="text-sm sm:text-base md:text-lg text-white/90 font-medium mb-6 max-w-2xl mx-auto leading-relaxed text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/10"
+                          className="text-sm sm:text-base md:text-lg text-white/90 font-medium mb-5 max-w-2xl mx-auto leading-relaxed text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/10"
                         >
                           {slide.shortDescription}
                         </motion.p>
 
-                        {/* CTA Buttons */}
+                        {/* Three Professional Buttons with Lab Equipment Emojis */}
                         <motion.div
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.6, delay: 0.4 }}
-                          className="flex flex-col sm:flex-row gap-3 justify-center items-center"
+                          className="flex flex-row flex-wrap gap-2 justify-center items-center"
                         >
-                          {/* Desktop buttons */}
-                          <div className="hidden sm:flex sm:flex-row gap-3">
-                            <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              onClick={() => setShowServicePopup(true)}
-                              className={`${BUTTON_STYLES.primary} ${DESKTOP_BUTTON_STYLES.primary} cursor-pointer`}
-                            >
-                              Request Service
-                            </motion.button>
-                            <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              onClick={handleRequestPrice}
-                              className={`${BUTTON_STYLES.secondary} ${DESKTOP_BUTTON_STYLES.secondary} cursor-pointer`}
-                            >
-                              Price List
-                            </motion.button>
-                            <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              onClick={handleRequestCallback}
-                              className={`${BUTTON_STYLES.accent} ${DESKTOP_BUTTON_STYLES.accent} cursor-pointer`}
-                            >
-                              Call Back
-                            </motion.button>
-                          </div>
-
-                          {/* Mobile single button */}
                           <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            onClick={() => setShowMobileMenuPopup(true)}
-                            className="sm:hidden bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full transition-all duration-300 font-medium px-8 py-3.5 text-sm shadow-lg hover:shadow-xl active:scale-95 w-full max-w-[200px] mx-auto flex items-center justify-center gap-2 cursor-pointer"
+                            onClick={() => setShowServicePopup(true)}
+                            className={`${BUTTON_STYLES.primary} ${DESKTOP_BUTTON_STYLES.primary} cursor-pointer`}
                           >
-                            <span>📱</span>
-                            <span>Click Me</span>
+                            <span>🔬</span>
+                            <span>Request</span>
+                          </motion.button>
+                          
+                          <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={handleRequestPrice}
+                            className={`${BUTTON_STYLES.secondary} ${DESKTOP_BUTTON_STYLES.secondary} cursor-pointer`}
+                          >
+                            <span>📋</span>
+                            <span>Price List</span>
+                          </motion.button>
+                          
+                          <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={handleRequestCallback}
+                            className={`${BUTTON_STYLES.accent} ${DESKTOP_BUTTON_STYLES.accent} cursor-pointer`}
+                          >
+                            <span>📞</span>
+                            <span>Call Back</span>
                           </motion.button>
                         </motion.div>
 
@@ -674,12 +590,12 @@ const HeroWithNavbar = forwardRef((props, ref) => {
                           transition={{ duration: 2, repeat: Infinity }}
                           whileHover={{ scale: 1.1 }}
                           onClick={handleOurServicesClick}
-                          className="mt-6 lg:mt-8 group relative 
+                          className="mt-5 lg:mt-6 group relative 
                             flex items-center justify-center
-                            mx-auto w-full max-w-[240px] 
-                            px-6 py-3 lg:px-8 lg:py-4 
+                            mx-auto w-full max-w-[220px] 
+                            px-5 py-2.5 lg:px-8 lg:py-4 
                             bg-gradient-to-r from-green-500 to-green-600 
-                            text-white font-bold text-sm lg:text-base 
+                            text-white font-bold text-xs lg:text-base 
                             rounded-full shadow-[0_10px_20px_rgba(34,197,94,0.3)] 
                             hover:shadow-[0_15px_30px_rgba(34,197,94,0.5)] 
                             hover:scale-110 active:scale-95 
@@ -689,7 +605,7 @@ const HeroWithNavbar = forwardRef((props, ref) => {
                         >
                           <span className="flex items-center gap-2">
                             <span className="tracking-wide">Explore All Services</span>
-                            <span className="text-white text-lg lg:text-xl animate-bounce">→</span>
+                            <span className="text-white text-sm lg:text-xl animate-bounce">→</span>
                           </span>
                         </motion.button>
                       </>

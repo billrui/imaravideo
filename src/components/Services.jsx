@@ -136,7 +136,7 @@ const DEFAULT_SERVICES = [
     icon: "🌱",
     category: "agriculture",
     price: "Contact for pricing",
-    turnaround: "1-5 days"
+    turnaround: "1-7 days"
   },
   {
     id: "plant",
@@ -152,7 +152,7 @@ const DEFAULT_SERVICES = [
     icon: "🌿",
     category: "agriculture",
     price: "Contact for pricing",
-    turnaround: "1-5 days"
+    turnaround: "1-7 days"
   },
   {
     id: "feed",
@@ -168,7 +168,7 @@ const DEFAULT_SERVICES = [
     icon: "🐄",
     category: "livestock",
     price: "Contact for pricing",
-    turnaround: "1-5 days"
+    turnaround: "1-7 days"
   },
   {
     id: "food",
@@ -179,7 +179,7 @@ const DEFAULT_SERVICES = [
     icon: "🍎",
     category: "food",
     price: "Contact for pricing",
-    turnaround: "1-5 days"
+    turnaround: "1-7 days"
   },
   {
     id: "fertilizer",
@@ -190,7 +190,7 @@ const DEFAULT_SERVICES = [
     icon: "🧪",
     category: "agriculture",
     price: "Contact for pricing",
-    turnaround: "1-5 days"
+    turnaround: "1-7 days"
   },
   {
     id: "compost",
@@ -201,7 +201,7 @@ const DEFAULT_SERVICES = [
     icon: "🌿",
     category: "agriculture",
     price: "Contact for pricing",
-    turnaround: "1-5 days"
+    turnaround: "1-7 days"
   },
   {
     id: "water",
@@ -218,7 +218,7 @@ const DEFAULT_SERVICES = [
     icon: "💧",
     category: "environmental",
     price: "Contact for pricing",
-    turnaround: "1-5 days"
+    turnaround: "1-7 days"
   },
   {
     id: "effluent",
@@ -229,7 +229,7 @@ const DEFAULT_SERVICES = [
     icon: "🏭",
     category: "environmental",
     price: "Contact for pricing",
-    turnaround: "1-5 days"
+    turnaround: "1-7 days"
   },
   {
     id: "research",
